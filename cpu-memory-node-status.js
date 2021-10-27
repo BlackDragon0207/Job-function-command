@@ -6,8 +6,8 @@ client.on('ready', () => {
             const CPU = percent.toFixed(2) // CPU Usage
     
             setInterval(() => {
-                const guild = client.guilds.cache.get("436048224617365524");
-                const m = guild.channels.cache.get("902893674629828678");
+                const guild = client.guilds.cache.get("길드ID");
+                const m = guild.channels.cache.get("채널ID");
                 m.setName(`📈 CPU ${CPU}%`)
             }, 5000)
         })
@@ -19,8 +19,8 @@ client.on('ready', () => {
                 const memoryusage = formatBytes(process.memoryUsage().heapUsed) // Memory Usage
        
                 setTimeout(() => { 
-                const guild2 = client.guilds.cache.get("436048224617365524");
-                const m2 = guild2.channels.cache.get("902893699812446238");
+                const guild2 = client.guilds.cache.get("길드ID");
+                const m2 = guild2.channels.cache.get("채널ID");
                 m2.setName(`💾 메모리 ${memoryusage}`)
             }, 5000)
         })
@@ -40,8 +40,8 @@ client.on('ready', () => {
             const node = process.version // NodeJS Version
    
             setTimeout(() => { 
-            const guild3 = client.guilds.cache.get("436048224617365524");
-            const m3 = guild3.channels.cache.get("902896696579752006");
+            const guild3 = client.guilds.cache.get("길드ID");
+            const m3 = guild3.channels.cache.get("채널ID");
             m3.setName(`💻 버전 ${node}`)
         }, 5000)
     })
