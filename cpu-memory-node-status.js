@@ -1,4 +1,5 @@
 //음성 채널로 만드시는걸 추천드립니다.
+//채팅 채널로 생성 할 시 스탯 표시가 이상하게 될 수 있으니 가급적으로는 음성 채널로 만들어주세요!
 
 const cpuStat = require('cpu-stat') // npm i cpu-stat
 
