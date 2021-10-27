@@ -1,3 +1,5 @@
+//음성 채널로 만드시는걸 추천드립니다.
+
 const cpuStat = require('cpu-stat') // npm i cpu-stat
 
 client.on('ready', () => {
