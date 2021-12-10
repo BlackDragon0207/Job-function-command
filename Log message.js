@@ -1,7 +1,11 @@
 const snipe = new Discord.Collection()
 
 client.on('messageUpdate', async(oldmessage, newMessage) => {    
-    const LogChannel = client.channels.cache.get('기록 할 채널 ID')
+    
+    const guild = client.guilds.cache.get("길드ID"); 
+    const LogChannel = guild.channels.cache.get('채널ID')
+    if(oldmessage.author.bot) return;
+    
     const EditLog = new Discord.MessageEmbed()
     .setColor("GREEN")
     .setAuthor(`메세지 수정 로그 [ Message Update Log ]`, oldmessage.author.displayAvatarURL())
@@ -17,7 +21,10 @@ client.on('messageUpdate', async(oldmessage, newMessage) => {
 client.on('messageDelete', message => {
     snipe.set(message.channel.id, message)
     
-    const LogChannel = client.channels.cache.get('기록 할 채널 ID')
+    const guild = client.guilds.cache.get("길드ID"); 
+    const LogChannel = guild.channels.cache.get('채널ID')
+    if(message.author.bot) return;
+    
     const DeletedLog = new Discord.MessageEmbed()
     .setColor("RED")
     .setAuthor(`메세지 삭제 로그 [ Message Delete Log ]`, message.author.displayAvatarURL())
