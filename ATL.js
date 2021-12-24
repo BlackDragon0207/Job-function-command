@@ -1,5 +1,5 @@
 const ms = require("ms")
-const timeSpan = ms("1 hour")
+const timeSpan = ms("1 days")
 
 client.on('guildMemberAdd', member => {
     if(member.guild.id === '길드ID') {
