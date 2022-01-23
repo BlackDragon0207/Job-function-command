@@ -8,14 +8,14 @@ module.exports = {
     async run (client, message, args){
         const member = message.mentions.members.first();
 
-        if(!member) return message.reply("Please specify a member!");
+        if(!member) return message.reply("닉네임을 초기화 할 유저를 정해주세요!");
 
         try { 
             member.setNickname(null);
         } catch (err) {
             console.log(err);
             message.reply(
-                "I do not have permission to reset" + member.toString() + " nickname!"
+                "권한이 없습니다" + member.toString() + " nickname!"
             );
         }
     },
