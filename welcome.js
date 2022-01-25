@@ -10,7 +10,7 @@ client.on('guildMemberAdd', member => {
 //서버에 들어온 유저의 MD으로 환영 메세지를 보냅니다
 client.on('guildMemberAdd', member => {
   if(member.guild.id != '길드ID') return;
-  let ok = client.emojis.cache.get('이모티콘ID')
+  let ok = client.emojis.cache.get('이모티콘 ID')
   let embed2 = new Discord.MessageEmbed()
   .setAuthor(`서버에 오신것을 환영합니다!`)
   .setThumbnail(client.user.displayAvatarURL())
@@ -24,7 +24,7 @@ client.on('guildMemberAdd', member => {
 
 client.on('guildMemberRemove', member => {
   if(member.guild.id != '길드ID') return;
-  let no = client.emojis.cache.get('이모티콘ID')
+  let no = client.emojis.cache.get('이모티콘 ID')
   let embed = new Discord.MessageEmbed()
   .setDescription(`${no} ${member.user.username} 님께서 서버에서 나가셨습니다.`)
   .setColor("#ff0606")
