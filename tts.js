@@ -18,7 +18,6 @@ module.exports = {
         try { 
             voiceChannel.join().then(connection => { 
                 const dispatcher = connection.play(audioURL);
-                message.channel.send('TTS가 정상적으로 작동하였습니다.');
                 dispatcher.on('finish', () => {
                     voiceChannel.leave();
                 });
