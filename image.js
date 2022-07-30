@@ -14,7 +14,7 @@ module.exports = {
     run: async (client, message, args) => {
         const query = args.join(" ")
         if(!query) return 
-        let wait = await message.channel.send(`${client.emojis.cache.get('715047358873731122')} 이미지 검색중..`)
+        let wait = await message.channel.send(`${client.emojis.cache.get('이모티콘 ID')} 이미지 검색중..`)
     
         const results = await google.scrape(query, 1)
         const embed = new Discord.MessageEmbed()
