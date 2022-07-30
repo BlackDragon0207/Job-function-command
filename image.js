@@ -13,7 +13,7 @@ module.exports = {
     aliases: ['이미지'],
     run: async (client, message, args) => {
         const query = args.join(" ")
-        if(!query) return 
+        if(!query) return message.channel.send(`검색할 이미지를 입력해주세요`)
         let wait = await message.channel.send(`${client.emojis.cache.get('이모티콘 ID')} 이미지 검색중..`)
     
         const results = await google.scrape(query, 1)
